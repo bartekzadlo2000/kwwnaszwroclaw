@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poznajmy się - Bartosz Żądło</title>
+    <link rel="stylesheet" href="styles.css">
+	<style>
+	        /* Dodatkowe style */
+        .sub-heading {
+            font-size: 14px;
+            color: black;
+            font-weight: bold; /* Pogrubienie */
+            font-family: Arial, sans-serif; /* Ten sam font co inne */
+            text-align: left; /* Wyrównanie do lewej */
+        }
+        .sub-heading span {
+            color: blue; /* Kolorowanie "nasz" na niebiesko */
+        }
+
+        .sub-heading span:nth-child(2) {
+            color: red; /* Kolorowanie "wrocław" na czerwono */
+			
+
+        }
+		
+		 /* Styl dla stopki */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+            font-size: 12px; /* Zmniejszenie rozmiaru napisu */
+        }
+		
+		
+		        /* Stylowanie tabelki */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+		
+ </style>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Bartosz Żądło</a></h1>
+        <nav>
+            <ul>
+                <li><a href="poznajmy-sie.html">POZNAJMY SIĘ</a></li>
+             
+                <li><a href="moj-program.html">NASZ PROGRAM</a></li>
+                <li><a href="media.html">MEDIA</a></li>
+                <li><a href="kontakt.html">KONTAKT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="logo-section">
+        <p class="sub-heading">KWW <span>Nasz</span> <span>Wrocław</span></p> <!-- Przeniesiony napis -->
+    </section>
+
+    <section class="hero">
+        <h2>Poznajmy się</h2>
+    </section>
+	<section class="content">
+        <h2> Liderzy KWW <span style="color: blue"> Nasz </span> <span style="color: red"> Wrocław!</h2> </span>
+		<hr>
+        <p> <strong> Bartosz Żądło </strong> <br> Kandydat na prezydenta Wrocławia </p>
+        <div class="image-container">
+            <img src="ja15.png" alt="Opis zdjęcia" width="400" height="500">
+			<p> <strong>Prywatnie: </strong> Gitarzysta, wielbiciel Wrocławia, fan rocka, miłośnik dobrej zabawy i podróży. Fan polskiej kinematografii lat 80-2000. <br> <strong> Zawodowo:</strong> Bezrobotny - poświęcony służbie miastu. </p>
+			<br>
+			<hr>
+			
+			<br>
+			<p> <strong>Piotr Błaszczak </strong> <br> Jedynka na liście do Rady Miasta. </p>
+			<img src="Piotrek.png" alt="Opis zdjęcia" width="400" height="500">
+			<p> <strong> Prywatnie: </strong> miłośnik lektury i kinematografii, kocha nature i wspinaczkę górską, historyk z zamiłowania. <br> <strong> Zawodowo: </strong> <u>Chwilowo</u> bezrobotny	</p> <br>
+			
+        </div>
+		
+		
+		
+    </section>
+	<hr>
+   <section class="content">
+        <h2>Spotkania osiedlowe</h2>
+        <p>Chcesz się spotkać i podyskutować? A może po prostu zbić piątkę?<br> Zapraszamy wszystkich na spotkania, podczas których chcemy wsłuchać się jeszcze mocniej w głos miasta, aby stworzyć<br><strong> <span style="color: Blue">Nasz</span> <span style="color: red">Wrocław</span>!</p><br></strong>
+        <table>
+            <tr>
+                <th><center>MIEJSCE</th>
+                <th>DATA</th>
+                <th>GODZINA</th>
+            </tr>
+            <tr>
+                <td><center>-Nowy Dwór/Muchobór - Park Tysiąclecia </td>
+                <td>22.05.2024</td>
+                <td>16:00</td>
+            </tr>
+            <tr>
+                <td><center>-Jagodno - Ul. Buforowa</td>
+                <td>24.05.2024</td>
+                <td>18:30</td>
+            </tr>
+            <tr>
+                <td><center>-Maślice - Wzgórze Maślickie</td>
+                <td>25.05.2024</td>
+                <td>12:00</td>
+            </tr>
+			 <tr>
+                <td><center>-Lipa Piotrowska - Osiedle Cynamonowe</td>
+                <td>26.05.2024</td>
+                <td>13:00</td>
+            </tr>
+			 <tr>
+                <td><center>-Kozanów - Wały nad Odrą</td>
+                <td>29.05.2024</td>
+                <td>17:00</td>
+            </tr>
+			 <tr>
+                <td><center>Gądów/Popowice - Park Zachodni</td>
+                <td>05.06.2024</td>
+                <td>17:00</td>
+            </tr>
+        </table>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Bartosz Żądło. Wszelkie prawa zastrzeżone.</p>
+        <p class="time-for-your-vote">Czas na Twój głos! <br> <br> (Strona fikcyjna, stworzona na potrzeby edukacyjne)</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add("fade-in");
+
+            const links = document.querySelectorAll("nav a, header h1 a");
+
+            links.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    const target = this.getAttribute("href");
+
+                    document.body.classList.remove("fade-in");
+                    document.body.classList.add("fade-out");
+
+                    setTimeout(() => {
+                        window.location.href = target;
+                    }, 1000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

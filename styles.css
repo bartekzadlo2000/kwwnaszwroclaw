@@ -1,0 +1,311 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+header {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+}
+
+.hero {
+    background-color: #003366;
+    color: #ffcc00;
+    padding: 13px 100px; /* Zmniejszenie paddingu */
+    text-align: center;
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.content {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.content h2 {
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.content p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #002244;
+}
+
+.footer p {
+    font-weight: bold;
+}
+
+/* Stylowanie rozwijanych sekcji */
+details {
+    margin-bottom: 1em;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5em;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+details[open] summary {
+    background-color: #e0e0e0;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+details > ul {
+    margin: 0;
+    padding: 0.5em 1em;
+    list-style-type: none;
+    border-left: 2px solid #007bff;
+}
+
+ul li {
+    margin-bottom: 0.5em;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+summary:before {
+    content: '\002B';
+    font-size: 1.2em;
+    margin-right: 0.5em;
+    color: #007bff;
+}
+
+details[open] summary:before {
+    content: '\2212';
+}
+
+details .goal {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+/* Nowy styl dla sekcji logo */
+.logo-section {
+    display: flex;
+    justify-content: flex-start; /* Wyrównanie do lewej */
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px; /* Dodanie paddingu */
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.logo-section p {
+    margin: 0;
+}
+
+/* Stylowanie linków do mediów społecznościowych */
+.social-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s;
+}
+
+.social-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.social-item p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.social-item:hover {
+    transform: scale(1.1);
+}
+
+.social-item a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.banner {
+    background-color: #003366; /* Użycie ładnego koloru niebieskiego */
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    height: 220vh;
+    margin-bottom: 0px; /* Dodanie odstępu między banerami */
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.candidate-image {
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.text-content {
+    text-align: left;
+    max-width: 600px;
+}
+
+.party-logo {
+    background-color: #ffcc00; /* Żółte tło dla logotypu partii */
+    color: #003366;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.6em;
+ 
+
+
+   
+
+}
+
+h1 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.building-image-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.building-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+}

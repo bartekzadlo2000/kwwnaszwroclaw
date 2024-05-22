@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KWW Nasz Wrocław - Bartosz Żądło</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Dodatkowe style */
+        .sub-heading {
+            font-size: 14px;
+            color: black;
+            font-weight: bold; /* Pogrubienie */
+            font-family: Arial, sans-serif; /* Ten sam font co inne */
+            text-align: left; /* Wyrównanie do lewej */
+        }
+
+        .sub-heading span {
+            color: blue; /* Kolorowanie "nasz" na niebiesko */
+        }
+
+        .sub-heading span:nth-child(2) {
+            color: red; /* Kolorowanie "wrocław" na czerwono */
+        }
+
+       /* Styl dla stopki */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+            font-size: 12px; /* Zmniejszenie rozmiaru napisu */
+        }
+
+        /* Styl dla zegara */
+        .countdown {
+            text-align: center;
+            font-size: 24px; /* Zwiększenie rozmiaru zegara */
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+       
+        }
+
+        /* Nowy styl dla sekcji logo */
+        .logo-section {
+            display: flex;
+            justify-content: flex-start; /* Wyrównanie do lewej */
+            align-items: left;
+            background-color: #fff;
+            padding: 10px 20px; /* Dodanie paddingu */
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .logo-section p {
+            margin: 0;
+        }
+
+        /* Zmniejszenie niebieskiego paska */
+        .hero {
+            background-color: #003366;
+            color: #ffcc00;
+            padding: 1px 20px; /* Zmniejszenie paddingu */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="main.html">Bartosz Żądło</a></h1>
+        <nav>
+            <ul>
+                <li><a href="poznajmy-sie.html">POZNAJMY SIĘ</a></li>
+             
+                
+                <li><a href="moj-program.html">NASZ PROGRAM</a></li>
+                <li><a href="media.html">MEDIA</a></li>
+                <li><a href="kontakt.html">KONTAKT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="logo-section">
+        <p class="sub-heading">KWW <span>Nasz</span> <span>Wrocław</span></p> <!-- Przeniesiony napis -->
+    </section>
+    <section class="hero">
+        <p class="time-for-your-vote"> <p style="font-size: 28px"> <div class="party-logo"> <br> <strong>To czas na twój głos! <br> Do wyborów zostało: </strong> </p> </div> <!-- Przeniesiono napis "Czas na twój głos" -->
+        <div class="countdown" id="countdown"></div> <!-- Przeniesiono zegar -->
+    </section>
+ 
+     
+
+    <div class="banner">
+        <div class="banner-content">
+            <div class="text-content">
+                <div class="party-logo">
+                    <p>KWW <br> Nasz Wrocław</p>
+                </div>
+                <h1>Razem zbudujemy Nasz Wrocław</h1> <br>
+                <h2>Bartosz Żądło</h2>
+                <h3>Nasz Prezydent Wrocławia</h3>
+            </div>
+            <img src="ja15.png" alt="Bartosz Żądło" class="candidate-image">
+        </div>
+
+    <div class="banner">
+        <div class="banner-content">
+            <div class="text-content">
+                <div class="party-logo">
+                    <p>KWW<br>Nasz Wrocław</p>
+                </div>
+                <h1>Silna rada miasta - Silne miasto</h1>
+                <h2>Piotr Błaszczak</h2>
+                <h3>Lista nr 5, miejsce 1 <br> do rady miejskiej</h3>
+            </div>
+            <img src="piotrek.png" alt="Izabela Bodnar" class="candidate-image">
+        </div>
+ <center> <iframe width="900" height="600" src="https://www.youtube.com/embed/dhZY4Ad8ltc?si=qM77BS0jd8LgYpg0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </div>
+    </div>
+    </div>
+	
+
+
+ 	 <footer class="footer">
+        <p>&copy; 2024 Bartosz Żądło. Wszelkie prawa zastrzeżone.</p>
+        <p class="time-for-your-vote">Czas na Twój głos! <br> <br> (Strona fikcyjna, stworzona na potrzeby edukacyjne)</p>
+    </footer>
+	
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Dodaj klasę fade-in po załadowaniu strony
+            document.body.classList.add("fade-in");
+
+            const links = document.querySelectorAll("nav a, header h1 a");
+
+            links.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    const target = this.getAttribute("href");
+
+                    document.body.classList.remove("fade-in");
+                    document.body.classList.add("fade-out");
+
+                    setTimeout(() => {
+                        window.location.href = target;
+                    }, 1000);  // 1 second transition
+                });
+            });
+
+            // Zegar odliczający czas do 15 czerwca
+            const countdownElement = document.getElementById("countdown");
+            const electionDate = new Date("2024-06-15T00:00:00").getTime();
+
+            const updateCountdown = () => {
+                const now = new Date().getTime();
+                const distance = electionDate - now;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                countdownElement.innerHTML = `${days} dni ${hours} godz. ${minutes} min. ${seconds} sek.`;
+
+                if (distance < 0) {
+                    clearInterval(interval);
+                    countdownElement.innerHTML = "Czas na twój głos.";
+                }
+            };
+
+            updateCountdown(); // Wywołanie funkcji od razu
+            const interval = setInterval(updateCountdown, 1000);
+        });
+    </script>
+</body>
+</html>

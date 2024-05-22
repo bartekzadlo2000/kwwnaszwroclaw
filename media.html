@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media - Bartosz Żądło</title>
+    <link rel="stylesheet" href="styles.css">
+	<style>
+	        /* Dodatkowe style */
+        .sub-heading {
+            font-size: 14px;
+            color: black;
+            font-weight: bold; /* Pogrubienie */
+            font-family: Arial, sans-serif; /* Ten sam font co inne */
+            text-align: left; /* Wyrównanie do lewej */
+        }
+        .sub-heading span {
+            color: blue; /* Kolorowanie "nasz" na niebiesko */
+        }
+
+        .sub-heading span:nth-child(2) {
+            color: red; /* Kolorowanie "wrocław" na czerwono */
+        }
+		
+		 /* Styl dla stopki */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+            font-size: 12px; /* Zmniejszenie rozmiaru napisu */
+        }
+		
+		</style>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Bartosz Żądło</a></h1>
+        <nav>
+            <ul>
+                <li><a href="poznajmy-sie.html">POZNAJMY SIĘ</a></li>
+               
+                <li><a href="moj-program.html">NASZ PROGRAM</a></li>
+                <li><a href="media.html">MEDIA</a></li>
+                <li><a href="kontakt.html">KONTAKT</a></li>
+            </ul>
+        </nav>
+    </header>
+	<section class="logo-section">
+        <p class="sub-heading"> KWW <span>Nasz</span> <span>Wrocław</span></p>  <!-- Przeniesiony napis -->
+    </section>
+    <section class="hero"> <br>
+        <h2>Media</h2>
+    </section>
+    <section class="content">
+        <h2>Nasze profile:</h2> <br>
+        <p>Po więcej informacji o kandydacie i KWW Nasz Wrocław wpadaj na nasze socjale ;).</p>
+        <div class="social-links">
+
+            <div class="social-item">
+                <a href="">
+                    <img src="icons/email.png" alt="E-Mail Icon">
+                    <p>E-Mail <br>  <strong> kkw.nasz@wroc.com </strong></p>
+                </a>
+            </div>
+            <div class="social-item">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="icons/facebook.png" alt="Facebook Icon">
+                    <p>Facebook <br> <strong> Nasz Wrocław </strong></p>
+                </a>
+            </div>
+            <div class="social-item">
+                <a href="https://twitter.com" target="_blank">
+                    <img src="icons/twitter.png" alt="Twitter Icon">
+                    <p>Twitter <br> <strong> Nasz Wroc </strong> </p>
+                </a>
+            </div>
+            <div class="social-item">
+                <a href="https://instagram.com" target="_blank">
+                    <img src="icons/instagram.png" alt="Instagram Icon">
+                    <p>Instagram <br> <strong> N.Wroc </strong> </p>
+                </a>
+            </div>
+            <div class="social-item">
+                <a href="https://www.youtube.com/channel/UCfsQt8oLs2sFSQKI7B8b0OQ" target="_blank">
+                    <img src="icons/youtube.png" alt="YouTube Icon">
+                    <p>YouTube <br> <strong> Nasz Wrocław! </strong> </p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <h2><strong> Nasz Wrocław to my: </strong> </h2> <br>
+<center> <iframe width="900" height="600" src="https://www.youtube.com/embed/dhZY4Ad8ltc?si=qM77BS0jd8LgYpg0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+	 <footer class="footer">
+        <p>&copy; 2024 Bartosz Żądło. Wszelkie prawa zastrzeżone.</p>
+        <p class="time-for-your-vote">Czas na Twój głos! <br> <br> (Strona fikcyjna, stworzona na potrzeby edukacyjne)</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Dodaj klasę fade-in po załadowaniu strony
+            document.body.classList.add("fade-in");
+
+            const links = document.querySelectorAll("nav a, header h1 a");
+
+            links.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    const target = this.getAttribute("href");
+
+                    document.body.classList.remove("fade-in");
+                    document.body.classList.add("fade-out");
+
+                    setTimeout(() => {
+                        window.location.href = target;
+                    }, 1000);  // 1 second transition
+                });
+            });
+        });
+    </script>
+</body>
+</html>
